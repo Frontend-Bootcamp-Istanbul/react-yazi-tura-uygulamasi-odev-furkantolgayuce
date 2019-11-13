@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+
+//Coin Flipper içeriye yüklendi.
 import CoinFlipper from './CoinFlipper';
 
 function App() {
