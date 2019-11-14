@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Coin from './Coin';
+//import Coin from '../Coin/Coin';
+import {Coin} from "../../components"
 import './CoinFlipper.css';
 
 class CoinFlipper extends Component {
@@ -19,7 +20,7 @@ class CoinFlipper extends Component {
     // "At!" butonuna tıkladığımızda paranın dönmesini istiyoruz, bu yüzden "donuyor" durumunu "true" yapıyoruz.
     this.setState({donuyor: true});
     // 1 saniye kadar dönmesi yeterli, bu yüzden 1 saniye sonra "donuyor" durmunu tekrar "false" yapıyoruz.
-    setTimeout(() => this.setState({donuyor: false}), 1000);
+    setTimeout(() => this.setState({donuyor: false}), 500);
     // Butona basıldıkça "side" props'umuzu bir random değişken vasıtsıyla değiştiriyoruz.
     if (Math.random()>0.5) {
       this.setState({side: "yazi"});
@@ -31,7 +32,7 @@ class CoinFlipper extends Component {
     // Butona basıldıkça "atisSayisi" props'umuzu bir artırıyoruz.
     //this.state.atisSayisi+=1 => bu yanlış.
     this.setState({atisSayisi:this.state.atisSayisi+1})
-    // atisSayisi 6 olduğunda sıfırlanır.
+    // atisSayisi 5 olduğunda sıfırlanır.
     if (this.state.atisSayisi === 5) {
       this.setState({atisSayisi:0,
       atisTura:0,
@@ -50,9 +51,9 @@ class CoinFlipper extends Component {
             <strong> {this.state.atisSayisi} </strong>
             atıştan
             <strong> {this.state.atisTura} </strong>
-            ü tura
+             tura
             <strong> {this.state.atisYazi} </strong>
-            si yazı geldi.</p>
+             yazı geldi.</p>
       </div>
     )
   }

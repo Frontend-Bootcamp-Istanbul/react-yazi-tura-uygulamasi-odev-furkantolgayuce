@@ -1,7 +1,7 @@
 import React from 'react';
 import './Coin.css';
-import CoinTura from './1-lira-tura.png';
-import CoinYazi from './1-lira-yazi.png';
+import CoinTura from './img/1-lira-tura.png';
+import CoinYazi from './img/1-lira-yazi.png';
 
 const Coin = (props) => {
   return (
